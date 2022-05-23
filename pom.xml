@@ -17,8 +17,9 @@
     <version>1.0-SNAPSHOT</version>
 
     <modules>
-        <module>spring-ioc</module>
+        <module>spring-1-ioc</module>
         <module>spring-i18</module>
+        <module>spring-boot-xxljob-executor</module>
     </modules>
 
     <dependencies>
