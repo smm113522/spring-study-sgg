@@ -2,7 +2,6 @@ package com.spring.xxljob.handle;
 
 import com.xxl.job.core.biz.model.ReturnT;
 import com.xxl.job.core.handler.annotation.XxlJob;
-import jdk.nashorn.internal.objects.NativeMath;
 import org.springframework.stereotype.Component;
 
 @Component

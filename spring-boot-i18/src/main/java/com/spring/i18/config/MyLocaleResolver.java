@@ -41,7 +41,7 @@ public class MyLocaleResolver implements LocaleResolver {
         //如果请求的链接中携带了 国际化的参数
         if (!StringUtils.isEmpty(language)){
             //zh_CN
-            String[] s = language.split(Constant.CONNECTOR);
+            String[] s = language.split(I18nConstant.SPLIT);
             //国家，地区
             locale = new Locale(s[0], s[1]);
         }

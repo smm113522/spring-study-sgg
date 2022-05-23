@@ -18,7 +18,7 @@
 
     <modules>
         <module>spring-1-ioc</module>
-        <module>spring-i18</module>
+        <module>spring-boot-i18</module>
         <module>spring-boot-xxljob-executor</module>
     </modules>
 
