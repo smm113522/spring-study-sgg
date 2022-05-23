@@ -15,6 +15,9 @@ import java.nio.charset.StandardCharsets;
 import java.util.Locale;
 import java.util.Objects;
 
+/**
+ *
+ */
 @Slf4j
 @Component
 public class I18nUtil {
@@ -33,7 +36,9 @@ public class I18nUtil {
         this.resolver = resolver;
     }
 
-
+    /**
+     * 初始化
+     */
     @PostConstruct
     public void init() {
         setBasename(basename);
@@ -85,7 +90,14 @@ public class I18nUtil {
         return getMessage(code, null, code, locale);
     }
 
-
+    /**
+     *
+     * @param code
+     * @param args
+     * @param defaultMessage
+     * @param locale
+     * @return
+     */
     public static String getMessage(String code, Object[] args, String defaultMessage, Locale locale) {
         ResourceBundleMessageSource messageSource = new ResourceBundleMessageSource();
         messageSource.setDefaultEncoding(StandardCharsets.UTF_8.toString());
@@ -101,10 +113,18 @@ public class I18nUtil {
 
     }
 
+    /**
+     *
+     * @param basename
+     */
     public static void setBasename(String basename) {
         I18nUtil.path = basename;
     }
 
+    /**
+     *
+     * @param resolver
+     */
     public static void setCustomLocaleResolver(MyLocaleResolver resolver) {
         I18nUtil.customLocaleResolver = resolver;
     }
