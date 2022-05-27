@@ -19,6 +19,11 @@
     <modules>
         <module>spring-1-ioc</module>
         <module>spring-boot-i18</module>
+        <module>spring-boot-knife4j</module>
+        <module>spring-boot-lua</module>
+        <module>spring-boot-shiro</module>
+        <module>spring-boot-swagger-ui2</module>
+        <module>spring-boot-swagger-ui3</module>
         <module>spring-boot-xxljob-executor</module>
     </modules>
 
