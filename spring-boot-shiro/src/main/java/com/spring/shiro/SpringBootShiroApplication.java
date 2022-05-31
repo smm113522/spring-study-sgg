@@ -14,6 +14,11 @@ public class SpringBootShiroApplication {
         SpringApplication.run(SpringBootShiroApplication.class, args);
     }
 
+    /**
+     * 密码加密
+     *
+     * @return
+     */
     @GetMapping("/hello")
     public String hello() {
         String userName = "admin123";
