@@ -41,7 +41,7 @@ public class RateLimiterAspect {
         List<Object> keys = Collections.singletonList(combineKey);
         try {
             Long number = redisTemplate.execute(limitScript, keys, count, time);
-            if (number==null || number.intValue() > count) {
+            if (number == null || number.intValue() > count) {
                 throw new ServiceException("访问过于频繁，请稍候再试");
             }
             log.info("限制请求'{}',当前请求'{}',缓存key'{}'", count, number.intValue(), key);

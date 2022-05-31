@@ -29,6 +29,7 @@
         <module>spring-boot-swagger-ui3</module>
         <module>spring-boot-xxljob-executor</module>
         <module>spring-boot-mybatis</module>
+        <module>spring-boot-jpa</module>
     </modules>
 
     <dependencies>
