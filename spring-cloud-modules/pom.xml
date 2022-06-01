@@ -12,7 +12,7 @@
     <artifactId>spring-cloud-modules</artifactId>
 
     <modules>
-
+        <module>spring-cloud-nacos</module>
     </modules>
 
 </project>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+zlt:
+datasource:
+ip: 127.0.0.1
+username: username
+password: password
+
+spring:
+datasource:
+url: jdbc:mysql://${zlt.datasource.ip}:3306/whyshare?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai
+username: ${zlt.datasource.username}
+password: ${zlt.datasource.password}
+driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis-plus:
+mapper-locations: classpath:/mapper/*Mapper.xml
+configuration:
+log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+global-config:
+db-config:
+id-type: auto
+
+</body>
+</html>
