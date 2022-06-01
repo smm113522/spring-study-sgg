@@ -18,6 +18,7 @@
 
     <modules>
         <module>spring-1-ioc</module>
+        <module>spring-2-aop</module>
         <module>spring-boot-exception</module>
         <module>spring-boot-i18</module>
         <module>spring-boot-interceptor</module>
@@ -30,6 +31,7 @@
         <module>spring-boot-xxljob-executor</module>
         <module>spring-boot-mybatis</module>
         <module>spring-boot-jpa</module>
+        <module>spring-cloud-modules</module>
     </modules>
 
 </project>
