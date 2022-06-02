@@ -9,4 +9,5 @@ public interface DemoServcie {
     List<User> selectById();
     Map<String, String> selectMap();
     List<Map<String, String>> selectListMap();
+    List selectList();
 }

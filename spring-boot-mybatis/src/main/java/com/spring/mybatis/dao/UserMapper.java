@@ -13,4 +13,6 @@ public interface UserMapper {
     List<Map<String, String>> selectListMap();
 
     int delectUser(Integer id);
+
+    List selectList();
 }

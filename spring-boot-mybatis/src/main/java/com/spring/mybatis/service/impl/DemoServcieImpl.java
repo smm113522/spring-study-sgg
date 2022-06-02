@@ -33,4 +33,8 @@ public class DemoServcieImpl implements DemoServcie {
         List<Map<String, String>> map = userMapper.selectListMap();
         return map;
     }
+
+    public List selectList() {
+        return userMapper.selectList();
+    }
 }

@@ -3,21 +3,27 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.spring.mybatis.dao.UserMapper">
-
     <select id="select" resultType="com.spring.mybatis.bean.User">
-		select username,password from tb_user
-	</select>
+        select username, password
+        from tb_user
+    </select>
 
-	<select id="selectMap" resultType="java.util.Map">
-	    select username,password from tb_user
+    <select id="selectMap" resultType="java.util.Map">
+        select username, password
+        from tb_user
     </select>
 
     <select id="selectListMap" resultType="java.util.Map">
-        select username,password from tb_user
+        select username, password
+        from tb_user
     </select>
 
     <delete id="delectUser" parameterType="String">
-        delete tb_user from tb_user where id = #{id}
+        delete tb_user
+        from tb_user
+        where id = #{id}
     </delete>
-
+    <select id="selectList" resultType="java.util.List">
+        select * from tb_user
+    </select>
 </mapper>
