@@ -14,7 +14,9 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-
+/**
+ * https://github.com/alibaba/druid/wiki/%E9%85%8D%E7%BD%AE_LogFilter
+ */
 @Configuration
 public class DruidConfig {
 
@@ -25,14 +27,14 @@ public class DruidConfig {
     }
 
     @Bean
-    public ServletRegistrationBean statViewServlet(){
+    public ServletRegistrationBean statViewServlet() {
         ServletRegistrationBean bean = new ServletRegistrationBean(new StatViewServlet(), "/druid/*");
         // 这些参数可以在 com.alibaba.druid.support.http.StatViewServlet 的父类 com.alibaba.druid.support.http.ResourceServlet 中找到
-        Map<String,String> initParams = new HashMap<>();
+        Map<String, String> initParams = new HashMap<>();
 
-        initParams.put("loginUsername","admin");
-        initParams.put("loginPassword","123456");
-        initParams.put("allow",""); //默认就是允许所有访问
+        initParams.put("loginUsername", "admin");
+        initParams.put("loginPassword", "123456");
+        initParams.put("allow", ""); //默认就是允许所有访问
 
         //deny：Druid 后台拒绝谁访问，表示禁止此ip访问
         // initParams.put("deny","192.168.10.132");
@@ -43,17 +45,17 @@ public class DruidConfig {
 
     //2、配置一个web监控的filter
     @Bean
-    public FilterRegistrationBean webStatFilter(){
+    public FilterRegistrationBean webStatFilter() {
         FilterRegistrationBean bean = new FilterRegistrationBean();
         bean.setFilter(new WebStatFilter());
 
-        Map<String,String> initParams = new HashMap<>();
-        initParams.put("exclusions","*.js,*.css,/druid/*");
+        Map<String, String> initParams = new HashMap<>();
+        initParams.put("exclusions", "*.js,*.css,/druid/*");
 
         bean.setInitParameters(initParams);
 
         bean.setUrlPatterns(Arrays.asList("/*"));
 
-        return  bean;
+        return bean;
     }
 }

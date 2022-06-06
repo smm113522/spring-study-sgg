@@ -12,7 +12,12 @@
     <artifactId>spring-boot-example</artifactId>
 
     <modules>
-
+        <module>spring-boot-druid</module>
+        <module>spring-boot-druid-dynamic</module>
+        <module>spring-boot-kisso</module>
+        <module>spring-boot-mybatis-plus</module>
+        <module>spring-boot-sa-token</module>
+        <module>spring-boot-webflux</module>
     </modules>
     
 </project>
