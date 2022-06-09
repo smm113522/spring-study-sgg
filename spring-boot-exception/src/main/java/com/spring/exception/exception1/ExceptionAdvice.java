@@ -1,6 +1,7 @@
 package com.spring.exception.exception1;
 
 import com.alibaba.fastjson.JSON;
+import com.spring.exception.utils.JsonUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -25,16 +26,10 @@ public class ExceptionAdvice {
     @ExceptionHandler({Exception.class})
     public void handleException(Exception e, HttpServletRequest request, HttpServletResponse response) throws IOException {
         logger.error("服务器发生异常：" + e.getMessage());
-        writheJson(response, JSON.toJSONString(new ResponseEntity<>("服务器异常2！" + e.getMessage(), HttpStatus.BAD_GATEWAY)));
+        JsonUtils.writheJson(response, JSON.toJSONString(new ResponseEntity<>("服务器异常2！" + e.getMessage(), HttpStatus.BAD_GATEWAY)));
     }
 
-    public void writheJson(HttpServletResponse response, String data) throws IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        PrintWriter out = response.getWriter();
-        out.println(data);
-        out.flush();
-        out.close();
-    }
+
 
     /**
      * 业务错误

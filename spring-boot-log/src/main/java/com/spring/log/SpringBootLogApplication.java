@@ -6,6 +6,27 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+
+/**
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ * https://gitee.com/lixiaogou/springbootdemo/tree/master/springbootEncrypt
+ * 接口加密处理
+ *
+ *
+ *
+ *  https://gitee.com/springboot-hlh/spring-boot-csdn/tree/master/09-spring-boot-interface-crypto
+ *
+ *
+ */
+
 @SpringBootApplication
 @RestController
 public class SpringBootLogApplication {

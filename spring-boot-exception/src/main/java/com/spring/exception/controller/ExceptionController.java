@@ -1,5 +1,6 @@
-package com.spring.exception.exception1;
+package com.spring.exception.controller;
 
+import com.spring.exception.exception1.ErrorRequestException;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 

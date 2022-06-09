@@ -1,5 +1,6 @@
 server:
   port: 8061
+
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -7,5 +8,6 @@ spring:
     url: jdbc:mysql://localhost:3306/demo?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai
     username: root
     password: 123456
+
 mybatis:
   mapper-locations: classpath:mybatis/**/*.xml
