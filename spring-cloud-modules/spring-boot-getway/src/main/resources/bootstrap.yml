@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: spring-boot-getway
+  profiles:
+    active: dev
+  #    active: pre
+  #    active: text
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.1.138:8848
+      config:
+        file-extension: yml
+        server-addr: 192.168.1.138:8848
+        shared-configs:
+          - data-id: ${spring.application.name}-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
+            refresh: true
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: hello_baidu
+          uri: http://www.baidu.com
+          predicates:
+            - Query=url, baidu
+
+
+
+server:
+  port: 1992
+

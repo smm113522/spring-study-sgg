@@ -15,10 +15,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class Knife4jTestController {
 
     @GetMapping(value = "/hello")
-    @ApiImplicitParam(name = "name",value = "姓名",required = true)
+    @ApiImplicitParam(name = "name", value = "姓名", required = true)
     @ApiOperation("测试接口")
-    public String test(@RequestParam("name") String name){
-        return "hello "+name+", I am  meimei han";
+    public String test(@RequestParam("name") String name) {
+        return "hello " + name + ", I am  meimei han";
     }
 
 }
