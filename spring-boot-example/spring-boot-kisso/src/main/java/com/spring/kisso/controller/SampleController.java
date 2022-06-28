@@ -1,6 +1,8 @@
 package com.spring.kisso.controller;
 
 import com.baomidou.kisso.SSOHelper;
+import com.baomidou.kisso.annotation.Action;
+import com.baomidou.kisso.annotation.Login;
 import com.baomidou.kisso.enums.TokenOrigin;
 import com.baomidou.kisso.security.token.SSOToken;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,6 +40,12 @@ public class SampleController {
     @RequestMapping("/index")
     public String index() {
         return "index";
+    }
+
+    @Login(action = Action.Skip)
+    @RequestMapping("/msg")
+    public String msg() {
+        return "msg";
     }
 
     @RequestMapping("/login.html")
