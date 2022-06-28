@@ -11,8 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.lang.reflect.Method;
 
 /**
- * @author hupeng
- * @date 2018-11-24
+
  */
 @Service
 @Transactional(propagation = Propagation.SUPPORTS, readOnly = true, rollbackFor = Exception.class)

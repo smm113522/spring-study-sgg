@@ -44,4 +44,15 @@ public class ExceptionController {
         return "index2";
     }
 
+    @Log
+    @GetMapping("/index4")
+    public String index4() {
+        try {
+            System.out.println("hello");
+        } catch (Exception e) {
+            throw new ErrorRequestException(e.getMessage());
+        }
+        return "index4";
+    }
+
 }
