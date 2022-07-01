@@ -1,0 +1,17 @@
+server:
+  port: 8090
+spring:
+  application:
+    name: spring-boot-mq
+  rabbitmq:
+    host: localhost
+    virtual-host: /
+    port: 5672
+    username: guest
+    password: guest
+    listener:
+      simple:
+        retry:
+          enabled: true
+          max-attempts: 2
+          initial-interval: 2000
