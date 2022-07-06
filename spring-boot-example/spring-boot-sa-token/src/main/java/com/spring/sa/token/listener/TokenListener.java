@@ -14,8 +14,12 @@ public class TokenListener implements SaTokenListener {
      * 每次登录时触发
      */
     @Override
-    public void doLogin(String s, Object o, String s1, SaLoginModel saLoginModel) {
+    public void doLogin(String login, Object account, String token, SaLoginModel saLoginModel) {
         System.out.println("登录成功");
+        System.out.println(login);
+        System.out.println(account);
+        System.out.println(token);
+        System.out.println(saLoginModel.toString());
     }
 
     /**
@@ -24,6 +28,7 @@ public class TokenListener implements SaTokenListener {
     @Override
     public void doLogout(String loginType, Object loginId, String tokenValue) {
         // ...
+
     }
 
     /**
@@ -68,6 +73,7 @@ public class TokenListener implements SaTokenListener {
     @Override
     public void doCreateSession(String id) {
         // ...
+
     }
 
     /**
@@ -76,6 +82,7 @@ public class TokenListener implements SaTokenListener {
     @Override
     public void doLogoutSession(String id) {
         // ...
+
     }
 
 }

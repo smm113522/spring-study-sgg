@@ -1,7 +1,6 @@
 package com.spring.sa.token.controller;
 
 import cn.dev33.satoken.annotation.*;
-import cn.dev33.satoken.basic.SaBasicUtil;
 import cn.dev33.satoken.stp.SaTokenInfo;
 import cn.dev33.satoken.stp.StpUtil;
 import cn.dev33.satoken.util.SaResult;
@@ -47,7 +46,7 @@ public class PageController {
     @SaCheckPermission("user-info")
     public SaResult safe() {
         StpUtil.openSafe(120);
-        return SaResult.data(null);
+        return SaResult.ok();
     }
 
 }
